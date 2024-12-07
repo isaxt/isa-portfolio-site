@@ -1,4 +1,36 @@
 /* CSS files add styling rules to your content */
+ 
+/* Define animation keyframes */
+ @keyframes move-across {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+/* Style for the moving text */
+.moving-text {
+  position: absolute;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  top: 80%; /* Adjust vertical positioning */
+  left: 0;
+  font-size: 24px; /* Adjust text size */
+  animation: move-across 17s linear infinite; /* Animation: duration, timing, and repeat */
+  width: 100%; /* Make sure it spans the screen horizontally */
+}
+
+/* Moving image */
+.moving-image {
+  position: absolute;
+  top: 85%; /* Adjust to place the image below the text */
+  left: 0; /* Start position */
+  height: 100px; /* Image height */
+  animation: move-across 17s linear infinite; /* Animation for the image */
+  animation-delay: 1s; /* Adds a delay of 1 second */
+  width: 100%; /* Make sure it spans the screen horizontally */
+}
 
 body {
     font-family: monospace;
